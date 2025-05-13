@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
 
     [Header("設定")]
     [SerializeField] float baseSpeed = 2;　//ベースの速度
-    [SerializeField] int firstCoinSpawn = 20; //初期の出現枚数
+    [SerializeField] int initialCoinSpawnCount = 20; //初期の出現枚数
     [SerializeField] float moveSpeed = 0.3f; //スターターが動く速度
 
     private int _coin =10 ;
@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         uiManager.SetCurrentCoin(_coin);
-        FirstSpawnCoin();
+        InitialCoinSpawn();
     }
     private void Update()
     {
@@ -55,12 +55,12 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            uiManager.GameOverUI();
+            uiManager.GameOverUIActive();
         }
     }
-    private void FirstSpawnCoin()
+    private void InitialCoinSpawn()
     {
-        for(int i = 1; i <= firstCoinSpawn; i++)
+        for(int i = 1; i <= initialCoinSpawnCount; i++)
         {
         　　//コインスポーンオブジェクトのサイズに沿ってコインを生成
 

@@ -12,7 +12,7 @@ public class UiManager : MonoBehaviour
     {
         currentCointext.text = "Coin: "+ coin.ToString();
     }
-    public void GameOverUI()
+    public void GameOverUIActive()
     {
         gameoverScreen.SetActive(true);
     }
